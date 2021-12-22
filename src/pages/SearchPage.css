@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100vh;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: rgb(0, 129, 65);
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+.searchPage {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .searchPage {
+    flex-direction: row;
+  }
+}
+
+.searchPage__logo {
+  text-decoration: none;
+  align-items: center;
+  font-weight: 900;
+  place-content: center;
+  margin-left: 3rem;
+  background: -webkit-linear-gradient(rgb(120, 250, 159), rgb(0, 129, 65));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: ease-in-out 0.2s; /* Animation */
+}
+
+.searchPage__logo:hover {
+  transform: scale(2, 3);
+  cursor: pointer; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+@media screen and (min-width: 1024px) {
+  .searchPage__logo {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+.searchPage__header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  align-items: flex-start;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.searchPage__result {
+  margin: 3rem 0;
+}
+
+.searchPage__resultCount {
+  color: #70757a;
+  font-size: 1rem;
+}
+
+.searchPage__results {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 12rem;
+}
+
+.searchPage__resultTitle {
+  text-decoration: none;
+  color: rgb(0, 129, 65);
+}
+
+.searchPage__resultLink {
+  text-decoration: none;
+  color: rgb(0, 129, 65);
+}
+
+.searchPage__resultTitle:hover {
+  text-decoration: underline;
+}
+
+.searchPage__resultTitle > h2 {
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.searchPage__resultSnippet {
+  margin-top: 0px;
+  padding: 2rem;
+  max-width: 50rem;
+}
+
+.searchPage__resultImage {
+  object-fit: contain;
+  height: 200px;
+  width: 200px;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1875px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
