@@ -7,7 +7,7 @@ import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
 
 function Search({ hideButtons = false }) {
-  const [, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ function Search({ hideButtons = false }) {
       term: input,
     });
 
-    navigate("./search");
+    navigate("/search");
   };
 
   return (
