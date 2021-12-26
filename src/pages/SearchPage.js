@@ -29,13 +29,12 @@ function SearchPage() {
           </p>
 
           {data?.items.map((item) => (
-            <div className="searchPage__result" data-aos="zoom-in">
+            <div className="searchPage__result">
               <a className="searchPage__resultLink" href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
                     <img
                       className="searchPage__resultImage"
-                      data-aos="zoom-in"
                       src={
                         item.pagemap?.cse_image.length > 0 &&
                         item.pagemap?.cse_image[0]?.src
